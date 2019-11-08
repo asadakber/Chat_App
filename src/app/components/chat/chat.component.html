@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">{{(userprofile | async)?.username}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+      
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()">Signout</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="card" style="width: 18rem;">
+        
+              <div class="card-body">
+              
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="card-1 card" style="width: 18rem;">
+          
+                <div class="card-body">
+                    <ul class="list-group list-group-flush" *ngFor="let chat of chatList">
+                        <li class="list-group-item">{{chat.name}}</li>
+                      </ul>
+                </div>
+                <ul >
+                  <li style="line-height: 50px"><app-list-upload></app-list-upload></li>
+                </ul>
+               
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-11">
+    <form #chatForm="ngForm" (ngSubmit)="onSubmit(chatForm)">
+        <div class="form-group">
+
+          <input name="name" #name="ngModel" [(ngModel)]="chatservice.selectedChat.name" style="background-color: black;opacity: 0.8;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Your Message">
+        </div>
+        <button [disabled]="!chatForm.valid" style="background-color: black;opacity: 0.8;" type="submit" class="btn btn-outline-primary">Send</button>
+        </form> 
+          <app-form-upload></app-form-upload>
+       </div>
+      </div>
+    </div>

@@ -1,0 +1,39 @@
+nav {
+    opacity: 0.8;
+  }
+  
+  .card {
+    margin-top: -0px;
+    border-radius: 0px;
+    height: 600px;
+    opacity: 0.8;
+    background-color: black;
+    margin-left: -130px;
+  }
+
+  ul li {
+    background-color: transparent;
+    color: white;
+    list-style: none;
+  }
+
+  .card-1 {
+    margin-top: -600px;
+    border-radius: 0px;
+    min-width: 1078px;
+    height: 600px;
+    opacity: 0.8;
+    background-color: black;
+    margin-left: 160px;
+    overflow-y: scroll;
+  }
+
+  form {
+    margin-left: 160px;
+    margin-top: 10px;
+  }
+
+  button {
+    margin-left: 900px;
+    margin-top: -95px;
+  }
